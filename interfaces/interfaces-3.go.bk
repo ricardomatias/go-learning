@@ -16,20 +16,20 @@ func (u *user) notify() {
 }
 
 type admin struct {
-	name  string
-	email string
-}
-
-func (a *admin) notify() {
-	fmt.Printf("Sending user email to %s<%s>\n", a.name, a.email)
+	user
+	level string
 }
 
 func main() {
-	bill := user{name: "Bill", email: "bill@gmail.com"}
-	sendNotification(&bill)
+	bill := admin{
+		user: user{
+			name:  "Bill",
+			email: "bill@gmail.com",
+		},
+		level: "super",
+	}
 
-	sarah := admin{name: "Sarah", email: "sarah@gmail.com"}
-	sendNotification(&sarah)
+	sendNotification(&bill)
 }
 
 func sendNotification(n notifier) {

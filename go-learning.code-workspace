@@ -2,10 +2,9 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "C:\\Users\\Ricardo\\Projects\\exercism\\go"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"workbench.colorCustomizations": {},
+	}
 }
